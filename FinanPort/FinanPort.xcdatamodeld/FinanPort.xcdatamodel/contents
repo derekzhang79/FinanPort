@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C60" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="CatalogoCuentas" syncable="YES">
+        <attribute name="index" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cuentaPeriodo" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CuentaPeriodo" inverseName="catalogo" inverseEntity="CuentaPeriodo" syncable="YES"/>
+    </entity>
+    <entity name="CatalogoGeografico" syncable="YES">
+        <attribute name="index" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="valorRazones" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ValorRazones" inverseName="pais" inverseEntity="ValorRazones" syncable="YES"/>
+    </entity>
+    <entity name="CatalogoRazones" syncable="YES">
+        <attribute name="index" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="valorRazones" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ValorRazones" inverseName="razon" inverseEntity="ValorRazones" syncable="YES"/>
+    </entity>
+    <entity name="CatalogoSectores" syncable="YES">
+        <attribute name="index" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="valorRazones" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ValorRazones" inverseName="sector" inverseEntity="ValorRazones" syncable="YES"/>
+    </entity>
+    <entity name="CuentaPeriodo" syncable="YES">
+        <attribute name="periodo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="valor" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="catalogo" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CatalogoCuentas" inverseName="cuentaPeriodo" inverseEntity="CatalogoCuentas" syncable="YES"/>
+        <relationship name="estudio" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Estudio" inverseName="cuentas" inverseEntity="Estudio" syncable="YES"/>
+    </entity>
+    <entity name="Estudio" syncable="YES">
+        <attribute name="fecha" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cuentas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CuentaPeriodo" inverseName="estudio" inverseEntity="CuentaPeriodo" syncable="YES"/>
+    </entity>
+    <entity name="ValorRazones" syncable="YES">
+        <attribute name="maximo" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="medio" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="minimo" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="pais" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CatalogoGeografico" inverseName="valorRazones" inverseEntity="CatalogoGeografico" syncable="YES"/>
+        <relationship name="razon" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CatalogoRazones" inverseName="valorRazones" inverseEntity="CatalogoRazones" syncable="YES"/>
+        <relationship name="sector" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CatalogoSectores" inverseName="valorRazones" inverseEntity="CatalogoSectores" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CatalogoCuentas" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="CatalogoGeografico" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="CatalogoRazones" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="CatalogoSectores" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="CuentaPeriodo" positionX="160" positionY="192" width="128" height="105"/>
+        <element name="Estudio" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="ValorRazones" positionX="160" positionY="192" width="128" height="135"/>
+    </elements>
+</model>
