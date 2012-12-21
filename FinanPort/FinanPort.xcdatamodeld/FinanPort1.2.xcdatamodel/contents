@@ -33,9 +33,9 @@
     </entity>
     <entity name="ValorRazones" representedClassName="ValorRazones" syncable="YES">
         <attribute name="formula" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="maximo" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="medio" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="minimo" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="maximo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="medio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="minimo" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="pais" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CatalogoGeografico" inverseName="valorRazones" inverseEntity="CatalogoGeografico" syncable="YES"/>
         <relationship name="razon" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CatalogoRazones" inverseName="valorRazones" inverseEntity="CatalogoRazones" syncable="YES"/>
         <relationship name="sector" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CatalogoSectores" inverseName="valorRazones" inverseEntity="CatalogoSectores" syncable="YES"/>

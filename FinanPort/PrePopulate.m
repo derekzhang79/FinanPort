@@ -10,14 +10,19 @@
 
 @implementation PrePopulate
 
-@synthesize contentCatalogoCuenta;
-@synthesize contentCatalogoRazones;
-@synthesize contentCatalogoGeografico;
-@synthesize contentCatalogoSectores;
 @synthesize catalogoCuentaDAO;
 @synthesize catalogoRazonesDAO;
 @synthesize catalogoSectoresDAO;
 @synthesize catalogoGeograficoDAO;
+@synthesize catalogoValoresRazonesDAO;
+@synthesize contentCatalogoCuenta;
+@synthesize contentCatalogoRazones;
+@synthesize contentCatalogoGeografico;
+@synthesize contentCatalogoSectores;
+@synthesize contentCatalogoValoresRazonesMinimo;
+@synthesize contentCatalogoValoresRazonesMedio;
+@synthesize contentCatalogoValoresRazonesMaximo;
+@synthesize contentCatalogoValoresRazonesFormula;
 
 -(void) setInformation
 {
@@ -28,6 +33,8 @@
     [self initCatalogoGeografico];
     
     [self initCatalogoSectores];
+    
+    [self initValoresRazones];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:@"true" forKey:@"preloadDatabase"];
@@ -212,6 +219,58 @@
     } 
     
     NSLog(@"Número de catalogo de cuentas: %d", [[catalogoCuentaDAO getAllCuentas] count]);
+}
+
+- (void) initValoresRazones
+{
+    contentCatalogoValoresRazonesMinimo = @"<1@<1@<1@<1@<1@<1@<1@<1@<1";
+    
+    contentCatalogoValoresRazonesMedio = @">1&<2|>2@>1&<2|>2@>1&<2|>2@>1&<2|>2@>1&<2|>2@>1&<2|>2@>1&<2|>2@>1&<2|>2@>1&<2|>2";
+    
+    contentCatalogoValoresRazonesMaximo = @"=2@=2@=2@=2@=2@=2@=2@=2@=2";
+    
+    contentCatalogoValoresRazonesFormula = @"(0+1+2+3-4+5+6+7+8+9+10)/(24+25+26+27+28+29)@\
+                                             (0+1+2+3-4+5+6+7+8+9+10)/(24+25+26+27+28+29)@\
+                                             (0+1+2+3-4+5+6+7+8+9+10)/(24+25+26+27+28+29)@\
+                                             (0+1+2+3-4+5+6+7+8+9+10)/(24+25+26+27+28+29)@\
+                                             (0+1+2+3-4+5+6+7+8+9+10)/(24+25+26+27+28+29)@\
+                                             (0+1+2+3-4+5+6+7+8+9+10)/(24+25+26+27+28+29)@\
+                                             (0+1+2+3-4+5+6+7+8+9+10)/(24+25+26+27+28+29)@\
+                                             (0+1+2+3-4+5+6+7+8+9+10)/(24+25+26+27+28+29)@\
+                                             (0+1+2+3-4+5+6+7+8+9+10)/(24+25+26+27+28+29)";
+    
+    NSArray *catalogoValoresRazonesMinimo  = [contentCatalogoValoresRazonesMinimo componentsSeparatedByString:@"@"];
+    NSArray *catalogoValoresRazonesMedio   = [contentCatalogoValoresRazonesMedio componentsSeparatedByString:@"@"];
+    NSArray *catalogoValoresRazonesMaximo  = [contentCatalogoValoresRazonesMaximo componentsSeparatedByString:@"@"];
+    NSArray *catalogoValoresRazonesFormula = [contentCatalogoValoresRazonesFormula componentsSeparatedByString:@"@"];
+    
+    catalogoValoresRazonesDAO = [[CatalogoValoresRazonesDAO alloc] initContext];
+    
+    int index = 0;
+    
+    NSLog(@"JAJA %d", [catalogoValoresRazonesMinimo count]);
+    if([[catalogoValoresRazonesDAO getAllValoresRazones] count] == 0) {
+        for(int i=0; i<[catalogoValoresRazonesMinimo count]; i++) {
+            NSString *minimo  = [catalogoValoresRazonesMinimo objectAtIndex:i];
+            NSString *medio   = [catalogoValoresRazonesMedio objectAtIndex:i];
+            NSString *maximo  = [catalogoValoresRazonesMaximo objectAtIndex:i];
+            NSString *formula = [catalogoValoresRazonesFormula objectAtIndex:i];
+            
+            ValorRazones *valorRazon = [catalogoValoresRazonesDAO getNewValorRazon];
+            valorRazon.minimo  = minimo;
+            valorRazon.medio   = medio;
+            valorRazon.maximo  = maximo;
+            valorRazon.formula = formula;
+            
+            NSError *error = nil;
+            
+            [catalogoValoresRazonesDAO.managedObjectContext save:&error];
+            
+            index++;
+        }
+    }
+    
+    NSLog(@"Número de valores de las razones: %d", [[catalogoValoresRazonesDAO getAllValoresRazones] count]);
 }
 
 @end

@@ -2,14 +2,11 @@
 //  ValorRazones.m
 //  FinanPort
 //
-//  Created by Ariel Parra on 13/12/12.
-//  Copyright (c) 2012 Itnovare. All rights reserved.
+//  Created by Ariel Parra on 20/12/12.
+//  Copyright (c) 2012 Itnovare Solutions. All rights reserved.
 //
 
 #import "ValorRazones.h"
-#import "CatalogoGeografico.h"
-#import "CatalogoRazones.h"
-#import "CatalogoSectores.h"
 
 
 @implementation ValorRazones
@@ -17,6 +14,7 @@
 @dynamic maximo;
 @dynamic medio;
 @dynamic minimo;
+@dynamic formula;
 @dynamic pais;
 @dynamic razon;
 @dynamic sector;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B4785D21684052B00B88571 /* CatalogoValoresRazonesDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4785D11684052B00B88571 /* CatalogoValoresRazonesDAO.m */; };
 		3BBC3AC0168025A600F41182 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBC3ABF168025A600F41182 /* QuartzCore.framework */; };
 		3BBC3AC2168025BB00F41182 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBC3AC1168025BB00F41182 /* CoreData.framework */; };
 		3BBC3AC31680262300F41182 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBC3ABA1680257100F41182 /* libCorePlot-CocoaTouch.a */; };
@@ -56,6 +57,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B4785D01684052B00B88571 /* CatalogoValoresRazonesDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatalogoValoresRazonesDAO.h; sourceTree = "<group>"; };
+		3B4785D11684052B00B88571 /* CatalogoValoresRazonesDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatalogoValoresRazonesDAO.m; sourceTree = "<group>"; };
+		3B548D111683CE8500F1CBE7 /* FinanPort1.1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinanPort1.1.xcdatamodel; sourceTree = "<group>"; };
+		3B548D161683D39A00F1CBE7 /* FinanPort1.2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinanPort1.2.xcdatamodel; sourceTree = "<group>"; };
 		3BBC3A3816801DE400F41182 /* GraphViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
 		3BBC3A3916801DE400F41182 /* GraphViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
 		3BBC3A4B168024D300F41182 /* CSVProcessBL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSVProcessBL.h; sourceTree = "<group>"; };
@@ -272,6 +277,8 @@
 				3BBC3A57168024F200F41182 /* CatalogoSectoresDAO.m */,
 				3BBC3A58168024F200F41182 /* CatalogoGeograficoDAO.h */,
 				3BBC3A59168024F200F41182 /* CatalogoGeograficoDAO.m */,
+				3B4785D01684052B00B88571 /* CatalogoValoresRazonesDAO.h */,
+				3B4785D11684052B00B88571 /* CatalogoValoresRazonesDAO.m */,
 			);
 			name = com.finanport.dao;
 			sourceTree = "<group>";
@@ -586,6 +593,7 @@
 				F2C542051676F7F900FA8BCC /* MonthChooserViewController.m in Sources */,
 				3BD6C1BF16810B9800894731 /* FinanPort.xcdatamodeld in Sources */,
 				3BD6C1C616824C1400894731 /* ExportManagerBL.m in Sources */,
+				3B4785D21684052B00B88571 /* CatalogoValoresRazonesDAO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -720,9 +728,11 @@
 		3BD6C1BD16810B9800894731 /* FinanPort.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				3B548D161683D39A00F1CBE7 /* FinanPort1.2.xcdatamodel */,
+				3B548D111683CE8500F1CBE7 /* FinanPort1.1.xcdatamodel */,
 				3BD6C1BE16810B9800894731 /* FinanPort.xcdatamodel */,
 			);
-			currentVersion = 3BD6C1BE16810B9800894731 /* FinanPort.xcdatamodel */;
+			currentVersion = 3B548D161683D39A00F1CBE7 /* FinanPort1.2.xcdatamodel */;
 			path = FinanPort.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
