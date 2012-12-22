@@ -10,6 +10,7 @@
 		3B4785D21684052B00B88571 /* CatalogoValoresRazonesDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4785D11684052B00B88571 /* CatalogoValoresRazonesDAO.m */; };
 		3B8DD801168553A200E11550 /* DDPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8DD80016854DA100E11550 /* DDPageControl.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3B8DD8A3168561CC00E11550 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8DD8A2168561CC00E11550 /* libCorePlot-CocoaTouch.a */; };
+		3B8DD8A61686109600E11550 /* GraphManagerBL.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8DD8A51686109600E11550 /* GraphManagerBL.m */; };
 		3BBC3AC0168025A600F41182 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBC3ABF168025A600F41182 /* QuartzCore.framework */; };
 		3BBC3AC2168025BB00F41182 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBC3AC1168025BB00F41182 /* CoreData.framework */; };
 		3BBC3AC41680264C00F41182 /* NSString+ParsingExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBC3A6B1680254000F41182 /* NSString+ParsingExtensions.m */; };
@@ -138,6 +139,8 @@
 		3B8DD8A0168561CC00E11550 /* NSDecimalNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDecimalNumberExtensions.h; sourceTree = "<group>"; };
 		3B8DD8A1168561CC00E11550 /* NSNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberExtensions.h; sourceTree = "<group>"; };
 		3B8DD8A2168561CC00E11550 /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
+		3B8DD8A41686109600E11550 /* GraphManagerBL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphManagerBL.h; sourceTree = "<group>"; };
+		3B8DD8A51686109600E11550 /* GraphManagerBL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphManagerBL.m; sourceTree = "<group>"; };
 		3BBC3A4B168024D300F41182 /* CSVProcessBL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSVProcessBL.h; sourceTree = "<group>"; };
 		3BBC3A4C168024D300F41182 /* CSVProcessBL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSVProcessBL.m; sourceTree = "<group>"; };
 		3BBC3A4E168024F200F41182 /* EstudioDAO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EstudioDAO.h; sourceTree = "<group>"; };
@@ -285,6 +288,8 @@
 				3BBC3A4C168024D300F41182 /* CSVProcessBL.m */,
 				3BD6C1C416824C1400894731 /* ExportManagerBL.h */,
 				3BD6C1C516824C1400894731 /* ExportManagerBL.m */,
+				3B8DD8A41686109600E11550 /* GraphManagerBL.h */,
+				3B8DD8A51686109600E11550 /* GraphManagerBL.m */,
 			);
 			name = com.finanport.business;
 			sourceTree = "<group>";
@@ -618,6 +623,7 @@
 				3BD6C1BF16810B9800894731 /* FinanPort.xcdatamodeld in Sources */,
 				3BD6C1C616824C1400894731 /* ExportManagerBL.m in Sources */,
 				3B4785D21684052B00B88571 /* CatalogoValoresRazonesDAO.m in Sources */,
+				3B8DD8A61686109600E11550 /* GraphManagerBL.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
