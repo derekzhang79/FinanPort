@@ -8,11 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "Razon.h"
+#import "FinanPortDAO.h"
 
 @interface Bussines : NSObject
 
-- (NSMutableArray *) getRazon1;
-- (NSMutableArray *) getRazon2;
-- (NSMutableArray *) getMonths;
+@property (nonatomic, retain) NSMutableArray *months;
+
+- (NSMutableArray *) months;
+- (NSMutableArray *) getRazonesByMonth: (NSNumber *)month;
 
 @end

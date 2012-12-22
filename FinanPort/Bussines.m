@@ -10,116 +10,104 @@
 
 @implementation Bussines
 
- NSMutableArray *razonesDeBussines;
+@synthesize months;
 
-- (NSMutableArray *) getRazon1 {
-    razonesDeBussines = [[NSMutableArray alloc] init];
+- (NSMutableArray *)months {
+    months = [[NSMutableArray alloc] initWithObjects:@"Enero", @"Febrero", @"Marzo", @"Abril", @"Mayo", @"Junio", @"Julio", @"Agosto", @"Septiembre", @"Octubre", @"Noviembre", @"Diciembre", @"Anual", nil];
     
-    Razon *razon;
-    
-    //Adding razones to the array
-    razon = [[Razon alloc] init];
-    [razon setTituloDeLaRazon:@"Razon 1"];
-    [razon setSemaforo:@"1.jpg"];
-    [razon setValorDeLaRazon:@"Valores 1"];
-    [razon setDetalleDelSignificado:@"Significado 1. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."];
-    [razon setDetalleDeLaLectura:@"Lectura 1. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."];
-    [razon setDetalleDelCuadroDeAccion:@"Cuadro de acciòn 1"];
-    [razon setDetalleDeLosValoresDeLaGrafica:@"Valor de la grafica 1"];
-    [razon setDetalleDelValorDeLaRazon:@"Detalle del valor de la razòn 1. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."];
-    [razonesDeBussines addObject:razon];
-    
-    razon = [[Razon alloc] init];
-    [razon setTituloDeLaRazon:@"Razon 2"];
-    [razon setSemaforo:@"2.jpg"];
-    [razon setValorDeLaRazon:@"Valores 2"];
-    [razon setDetalleDelSignificado:@"Significado 2. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."];
-    [razon setDetalleDeLaLectura:@"Lectura 2. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."];
-    [razon setDetalleDelCuadroDeAccion:@"Cuadro de acciòn 2"];
-    [razon setDetalleDeLosValoresDeLaGrafica:@"Valor de la grafica 2"];
-    [razon setDetalleDelValorDeLaRazon:@"Detalle del valor de la razòn 2. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."];
-    [razonesDeBussines addObject:razon];
-    
-    razon = [[Razon alloc] init];
-    [razon setTituloDeLaRazon:@"Razon 3"];
-    [razon setSemaforo:@"3.jpg"];
-    [razon setValorDeLaRazon:@"Valores 3"];
-    [razon setDetalleDelSignificado:@"Significado 3. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."];
-    [razon setDetalleDeLaLectura:@"Lectura 3. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."];
-    [razon setDetalleDelCuadroDeAccion:@"Cuadro de acciòn 3"];
-    [razon setDetalleDeLosValoresDeLaGrafica:@"Valor de la grafica 3"];
-    [razon setDetalleDelValorDeLaRazon:@"Detalle del valor de la razòn 3. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."];
-    [razonesDeBussines addObject:razon];
-    
-    razon = [[Razon alloc] init];
-    [razon setTituloDeLaRazon:@"Razon 4"];
-    [razon setSemaforo:@"3.jpg"];
-    [razon setValorDeLaRazon:@"Valores 4"];
-    [razon setDetalleDelSignificado:@"Significado 4. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."];
-    [razon setDetalleDeLaLectura:@"Lectura 4. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."];
-    [razon setDetalleDelCuadroDeAccion:@"Cuadro de acciòn 4"];
-    [razon setDetalleDeLosValoresDeLaGrafica:@"Valor de la grafica 4"];
-    [razon setDetalleDelValorDeLaRazon:@"Detalle del valor de la razòn 1. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."];
-    [razonesDeBussines addObject:razon];
-    
-    return razonesDeBussines;
-}
-
-- (NSMutableArray *) getRazon2 {
-    razonesDeBussines = [[NSMutableArray alloc] init];
-    
-    Razon *razon;
-    
-    //Adding razones to the array
-    razon = [[Razon alloc] init];
-    [razon setTituloDeLaRazon:@"Razon 5"];
-    [razon setSemaforo:@"2.jpg"];
-    [razon setValorDeLaRazon:@"Valores 5"];
-    [razon setDetalleDelSignificado:@"Significado 5. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."];
-    [razon setDetalleDeLaLectura:@"Lectura 5. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."];
-    [razon setDetalleDelCuadroDeAccion:@"Cuadro de acciòn 5"];
-    [razon setDetalleDeLosValoresDeLaGrafica:@"Valor de la grafica 5"];
-    [razon setDetalleDelValorDeLaRazon:@"Detalle del valor de la razòn 5. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."];
-    [razonesDeBussines addObject:razon];
-    
-    razon = [[Razon alloc] init];
-    [razon setTituloDeLaRazon:@"Razon 6"];
-    [razon setSemaforo:@"1.jpg"];
-    [razon setValorDeLaRazon:@"Valores 6"];
-    [razon setDetalleDelSignificado:@"Significado 6. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."];
-    [razon setDetalleDeLaLectura:@"Lectura 6. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."];
-    [razon setDetalleDelCuadroDeAccion:@"Cuadro de acciòn 6"];
-    [razon setDetalleDeLosValoresDeLaGrafica:@"Valor de la grafica 6"];
-    [razon setDetalleDelValorDeLaRazon:@"Detalle del valor de la razòn 6. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."];
-    [razonesDeBussines addObject:razon];
-    
-    razon = [[Razon alloc] init];
-    [razon setTituloDeLaRazon:@"Razon 7"];
-    [razon setSemaforo:@"3.jpg"];
-    [razon setValorDeLaRazon:@"Valores 7"];
-    [razon setDetalleDelSignificado:@"Significado 7. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."];
-    [razon setDetalleDeLaLectura:@"Lectura 7. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."];
-    [razon setDetalleDelCuadroDeAccion:@"Cuadro de acciòn 7"];
-    [razon setDetalleDeLosValoresDeLaGrafica:@"Valor de la grafica 7"];
-    [razon setDetalleDelValorDeLaRazon:@"Detalle del valor de la razòn 7. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."];
-    [razonesDeBussines addObject:razon];
-    
-    razon = [[Razon alloc] init];
-    [razon setTituloDeLaRazon:@"Razon 8"];
-    [razon setSemaforo:@"3.jpg"];
-    [razon setValorDeLaRazon:@"Valores 8"];
-    [razon setDetalleDelSignificado:@"Significado 8. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."];
-    [razon setDetalleDeLaLectura:@"Lectura 8. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."];
-    [razon setDetalleDelCuadroDeAccion:@"Cuadro de acciòn 8"];
-    [razon setDetalleDeLosValoresDeLaGrafica:@"Valor de la grafica 8"];
-    [razon setDetalleDelValorDeLaRazon:@"Detalle del valor de la razòn 8. orem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."];
-    [razonesDeBussines addObject:razon];
-    
-    return razonesDeBussines;
-}
-
-- (NSMutableArray *) getMonths {
-    NSMutableArray *months = [[NSMutableArray alloc] initWithObjects:@"Enero", @"Febrero", @"Marzo", @"Abril", @"Mayo", @"Junio", @"Julio", @"Agosto", @"Septiembre", @"Octubre", @"Noviembre", @"Diciembre", @"Anual", nil];
+    //NSLog(@"months %@",[months objectAtIndex:0]);
     return months;
 }
+
+- (NSMutableArray *) getRazonesByMonth: (NSNumber *)month{
+    NSMutableArray *razones;
+    NSMutableArray *cuentas;
+    FinanPortDAO   *finanPortDAO;
+    
+    finanPortDAO = [[FinanPortDAO alloc] init];
+    
+    razones = [finanPortDAO getRazones];
+    cuentas = [finanPortDAO getCuentasByMonths:month];
+    
+    //NSLog(@"[razones count] %d", [razones count]);
+    
+    for (int i=0; i < [razones count]; i++) {
+        float temp1 = 0;
+        NSString *semaforo = [[NSString alloc] init];
+        
+        //NSLog(@"titulo %@",[[razones objectAtIndex:i] titulo]);
+        
+        NSNumber *temp2 = [[NSNumber alloc] init];
+        //temp2 = [self calculateNumerador:[[razones objectAtIndex:i] numeradorFormula] :cuentas];
+        temp2 = [self calculateValue:[[razones objectAtIndex:i] numeradorFormula] :cuentas];
+        [[razones objectAtIndex:i] setNumerador:temp2];
+        //NSLog(@"numerador %d",[temp2 intValue]);
+        
+        temp1 = [temp2 intValue];
+        
+        //temp2 = [self calculateDenominador:[[razones objectAtIndex:i] denominadorFormula] :cuentas];
+        temp2 = [self calculateValue:[[razones objectAtIndex:i] denominadorFormula] :cuentas];
+        [[razones objectAtIndex:i] setDenominador:temp2];
+        //NSLog(@"denominador %d",[temp2 intValue]);
+        
+        if ([temp2 intValue] != 0) {
+            temp1 = (temp1 / [temp2 intValue]);
+            
+            //NSLog(@"total %f",temp1);
+            
+            temp2 = [[NSNumber alloc] initWithFloat:temp1];
+            [[razones objectAtIndex:i] setValor:[NSString stringWithFormat:@"%.02f",temp1]];
+            
+            //Rojo: Menor a 1
+            //Ambar: Caso 1 (Mayor a 1 y Menor a 2), Caso 2 (Mayor a 2)
+            //Verde: Igual 2
+            if (temp1 < 1) {
+                semaforo = @"semaforo_r.png";
+            }else if (temp1 > 1 &&  temp1 < 2) {
+                semaforo = @"semaforo_a.png";
+            }else if (temp1 == 2){
+                semaforo = @"semaforo_v.png";
+            }
+            //NSLog(@"semaforo %@",semaforo);
+            [[razones objectAtIndex:i] setSemaforo:semaforo];
+        } else {
+            [[razones objectAtIndex:i] setValor:@"No aplica"];
+            [[razones objectAtIndex:i] setSemaforo:@"semaforo_r.png"];
+        }
+    }
+    return razones;
+}
+
+- (NSNumber *)calculateValue: (NSString *)formula: (NSMutableArray *)cuentas {
+    int index  = 0;
+    int result = 0;
+    int j = 0;
+    NSNumber *temp;
+    NSArray  *indexes = [formula componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"+-"]];
+    
+    NSArray  *signs   = [formula componentsSeparatedByCharactersInSet:[NSCharacterSet decimalDigitCharacterSet]];
+    
+    //NSLog(@"%@", indexes);
+    //NSLog(@"%@", signs);
+    
+    index  = [[indexes objectAtIndex:j] intValue];
+    result = [[cuentas objectAtIndex:index] intValue];
+    for (int i=0; i < [signs count]; i++) {
+        if ([[signs objectAtIndex:i] isEqualToString:@"+"]) {
+            j++;
+            index  = [[indexes objectAtIndex:j] intValue];
+            result = result + [[cuentas objectAtIndex:index] intValue];
+        } else if ([[signs objectAtIndex:i] isEqualToString:@"-"]) {
+            j++;
+            index  = [[indexes objectAtIndex:(j)] intValue];
+            result = result - [[cuentas objectAtIndex:index] intValue];
+        }
+    }
+    
+    //NSLog(@"result: %d", result);
+    temp = [[NSNumber alloc] initWithInt:result];
+    
+    return temp;
+}
+
 @end

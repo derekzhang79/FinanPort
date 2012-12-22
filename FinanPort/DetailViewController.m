@@ -43,14 +43,13 @@
     //NSLog(@"semaforo: %@",[razonActual semaforo]);
     //NSLog(@"valorDeLaRazon: %@",[razonActual valorDeLaRazon]);
     
-    [self setTitle:[razonActual tituloDeLaRazon]];
-    [detalleDelSignificado setText:[razonActual detalleDelSignificado]];
-    [detalleDeLaLectura setText:[razonActual detalleDeLaLectura]];
-    [detalleDelCuadrodeAccion setText:[razonActual detalleDelCuadroDeAccion]];
+    [self setTitle:[razonActual titulo]];
+    [detalleDelSignificado setText:[razonActual significado]];
+    [detalleDeLaLectura setText:[NSString stringWithFormat:[razonActual lectura],[razonActual valor]]];
+    [detalleDelCuadrodeAccion setText:[razonActual cuadroDeAccion]];
     UIImage *imagen = [UIImage imageNamed:[razonActual semaforo]];
     [semaforo setImage:imagen];
-    [detalleDeLosValoresDeLaGrafica setText:[razonActual detalleDeLosValoresDeLaGrafica]];
-    [detalleDelValorDeLaRazon setText:[razonActual detalleDelValorDeLaRazon]];
+    [detalleDelValorDeLaRazon setText:[razonActual valor]];
     
     numberOfPages = 2;
     [pageControl setNumberOfPages:numberOfPages];

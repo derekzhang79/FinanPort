@@ -13,6 +13,7 @@
 
 @interface DetailViewController : UIViewController <UIScrollViewDelegate>
 
+
 @property (retain, nonatomic) IBOutlet UIScrollView        * scrollView;
 @property (weak,   nonatomic) IBOutlet UITextView          * detalleDelSignificado;
 @property (weak,   nonatomic) IBOutlet UITextView          * detalleDeLaLectura;

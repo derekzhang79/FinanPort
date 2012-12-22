@@ -9,18 +9,23 @@
 #import <Foundation/Foundation.h>
 
 @interface Razon : NSObject
-//  Property section
-//  Add below this section any properties
-@property(nonatomic, strong) NSString *tituloDeLaRazon;
-@property(nonatomic, strong) NSString *semaforo;
-@property(nonatomic, strong) NSString *valorDeLaRazon;
-@property(nonatomic, strong) NSString *detalleDelSignificado;
-@property(nonatomic, strong) NSString *detalleDeLaLectura;
-@property(nonatomic, strong) NSString *detalleDelCuadroDeAccion;
-@property(nonatomic, strong) NSString *detalleDeLosValoresDeLaGrafica;
-@property(nonatomic, strong) NSString *detalleDelValorDeLaRazon;
 
-//  Action section
-//  add below this section any actions
+@property(nonatomic, strong) NSString *titulo;
+@property(nonatomic, strong) NSString *semaforo;
+@property(nonatomic, strong) NSString *valor;
+@property(nonatomic, strong) NSString *significado;
+@property(nonatomic, strong) NSString *lectura;
+@property(nonatomic, strong) NSString *cuadroDeAccion;
+@property(nonatomic, strong) NSString *numeradorFormula;
+@property(nonatomic, strong) NSString *tituloDelNumerador;
+@property(nonatomic, strong) NSString *denominadorFormula;
+@property(nonatomic, strong) NSString *tituloDelDenomidor;
+@property(nonatomic, strong) NSNumber *numerador;
+@property(nonatomic, strong) NSNumber *denominador;
+@property(nonatomic, strong) NSString *formula;
+@property(nonatomic, strong) NSString *condicionesSemaforoVerde;
+@property(nonatomic, strong) NSString *condicionesSemaforoAmarillo;
+@property(nonatomic, strong) NSString *condicionesSemaforoRojo;
+
 
 @end

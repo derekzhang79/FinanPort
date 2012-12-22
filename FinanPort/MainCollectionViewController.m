@@ -15,9 +15,10 @@
 @implementation MainCollectionViewController
 
 @synthesize alert;
-@synthesize popoverContent;
+@synthesize monthChooseViewController;
 @synthesize monthButton;
 @synthesize popoverController;
+@synthesize bussines;
 @synthesize importedRows;
 @synthesize processCSV;
 @synthesize urlCSV;
@@ -42,10 +43,12 @@
     [[self collectionView] setDataSource:self];
     [[self collectionView] setDelegate:self];
     
-    [monthButton setTitle:@"Enero"];
+    bussines = [[Bussines alloc] init];
+    //NSLog(@"Bussines logs; %@", [[bussines months] objectAtIndex:0]);
+    [monthButton setTitle:[[bussines months] objectAtIndex:0]];
     
-    Bussines *bussines = [[Bussines alloc] init];
-    razones = [bussines getRazon1];
+    razones = [bussines getRazonesByMonth:0];
+    //NSLog(@"razones: %@", [[razones objectAtIndex:0] titulo]);
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,25 +69,27 @@
     static NSString *cellIndentifier = @"razonCell";
     RazonCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIndentifier forIndexPath:indexPath];
     
-    [[cell tituloDeLaRazon] setText:[[razones objectAtIndex:indexPath.item] tituloDeLaRazon]];
+    [[cell tituloDeLaRazon] setText:[[razones objectAtIndex:indexPath.item] titulo]];
+    //NSLog(@"semaforo cell %@",[[razones objectAtIndex:indexPath.item] semaforo]);
     UIImage *imagen = [UIImage imageNamed:[[razones objectAtIndex:indexPath.item] semaforo]];
     [[cell semaforo] setImage:imagen];
-    [[cell valorDeLaRazon] setText:[[razones objectAtIndex:indexPath.item] valorDeLaRazon]];
-         
+    [[cell valorDeLaRazon] setText:[[razones objectAtIndex:indexPath.item] valor]];
+    
     return cell;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     //NSLog(@"prepareForSegue");
-    if ([[segue identifier] isEqualToString:@"showDetails"]) {
+    NSIndexPath *indexPath = [[self.collectionView indexPathsForSelectedItems] lastObject];
+    Razon *razon = [razones objectAtIndex:[indexPath row]];
+    //NSLog(@"1tituloDeLaRazon: %@",[razon tituloDeLaRazon]);
+    //NSLog(@"1semaforo: %@",[razon semaforo]);
+    //NSLog(@"1valorDeLaRazon: %@",[razon valorDeLaRazon]);
+    
+    if ([[segue identifier] isEqualToString:@"showDetails"] && !([[razon valor] isEqualToString:@"No aplica"])) {
         //UINavigationController *navigationController = segue.destinationViewController;
         DetailViewController *detailViewController = [segue destinationViewController];
         
-        NSIndexPath *indexPath = [[self.collectionView indexPathsForSelectedItems] lastObject];
-        Razon *razon = [razones objectAtIndex:[indexPath row]];
-        //NSLog(@"1tituloDeLaRazon: %@",[razon tituloDeLaRazon]);
-        //NSLog(@"1semaforo: %@",[razon semaforo]);
-        //NSLog(@"1valorDeLaRazon: %@",[razon valorDeLaRazon]);
         [detailViewController setRazonActual:razon];
     }
 }
@@ -94,10 +99,12 @@
     if ([popoverController isPopoverVisible]) {
         [popoverController dismissPopoverAnimated:YES];
     } else {
-        popoverContent = [[MonthChooserViewController alloc] init];
-        popoverController = [[UIPopoverController alloc] initWithContentViewController:popoverContent];
+        monthChooseViewController = [[MonthChooserViewController alloc] init];
+        [monthChooseViewController setMonths:[bussines months]];
         
-        popoverContent.delegate = self;
+        popoverController = [[UIPopoverController alloc] initWithContentViewController:monthChooseViewController];
+        
+        monthChooseViewController.delegate = self;
         
         [[popoverController self] presentPopoverFromBarButtonItem:sender
                                          permittedArrowDirections:UIPopoverArrowDirectionAny
@@ -108,10 +115,14 @@
 - (void)didSelectMonth{
     //NSLog(@"didSelectMonth.");
     
-    Bussines *bussines = [[Bussines alloc] init];
-    NSMutableArray *months = [bussines getMonths];
-    [monthButton setTitle:[months objectAtIndex:[[popoverContent monthIndexPath] row]]];
-
+    //NSLog(@"Bussines didSelectMonth logs; %@", [[bussines months] objectAtIndex:[[monthChooseViewController monthIndexPath] row]]);
+    [monthButton setTitle:[[bussines months] objectAtIndex:[[monthChooseViewController monthIndexPath] row]]];
+    
+    NSNumber *temp = [[NSNumber alloc] initWithInt:[[monthChooseViewController monthIndexPath] row]];
+    razones = [bussines getRazonesByMonth:temp];
+    
+    [self.collectionView reloadData];
+    
     [popoverController dismissPopoverAnimated:YES];
 }
 
@@ -140,14 +151,14 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     
     //NSLog(@"alertView: %d", buttonIndex);
-    Bussines *bussines = [[Bussines alloc] init];
     if(buttonIndex == 0){
         //NSLog(@"Cancelar");
-        razones = [bussines getRazon1];
+        razones = [bussines getRazonesByMonth:0];
         //NSLog(@"razones: %@", [[razones objectAtIndex:0] tituloDeLaRazon]);
     }else if(buttonIndex == 1){
         //NSLog(@"Aceptar");
-        razones = [bussines getRazon2];
+        NSNumber *temp = [[NSNumber alloc] initWithInt:1];
+        razones = [bussines getRazonesByMonth:temp];
         //NSLog(@"razones: %@", [[razones objectAtIndex:0] tituloDeLaRazon]);
         
         NSError *outError;
