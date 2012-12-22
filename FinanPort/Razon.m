@@ -9,15 +9,22 @@
 #import "Razon.h"
 
 @implementation Razon
-//  Synthesize section
-//  Add below this section any synthesizes
-@synthesize tituloDeLaRazon;
+
+@synthesize titulo;
 @synthesize semaforo;
-@synthesize valorDeLaRazon;
-@synthesize detalleDelSignificado;
-@synthesize detalleDeLaLectura;
-@synthesize detalleDelCuadroDeAccion;
-@synthesize detalleDeLosValoresDeLaGrafica;
-@synthesize detalleDelValorDeLaRazon;
+@synthesize valor;
+@synthesize significado;
+@synthesize lectura;
+@synthesize cuadroDeAccion;
+@synthesize numeradorFormula;
+@synthesize tituloDelNumerador;
+@synthesize denominadorFormula;
+@synthesize tituloDelDenomidor;
+@synthesize numerador;
+@synthesize denominador;
+@synthesize formula;
+@synthesize condicionesSemaforoVerde;
+@synthesize condicionesSemaforoAmarillo;
+@synthesize condicionesSemaforoRojo;
 
 @end

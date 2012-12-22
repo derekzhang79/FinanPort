@@ -40,10 +40,11 @@
 		F2C542051676F7F900FA8BCC /* MonthChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C542031676F7F900FA8BCC /* MonthChooserViewController.m */; };
 		F2C542061676F7F900FA8BCC /* MonthChooserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2C542041676F7F900FA8BCC /* MonthChooserViewController.xib */; };
 		F2CBBE4A16755F490040F2F1 /* Bussines.m in Sources */ = {isa = PBXBuildFile; fileRef = F2CBBE4916755F490040F2F1 /* Bussines.m */; };
-		F2CD5B6A1676EAEF00B627D4 /* pie-graph.png in Resources */ = {isa = PBXBuildFile; fileRef = F2CD5B691676EAEF00B627D4 /* pie-graph.png */; };
-		F2DB39FA1672FE8500794613 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2DB39F71672FE8500794613 /* 1.jpg */; };
-		F2DB39FB1672FE8500794613 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2DB39F81672FE8500794613 /* 2.jpg */; };
-		F2DB39FC1672FE8500794613 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2DB39F91672FE8500794613 /* 3.jpg */; };
+		F2CBDA9816858FC300D9CA0B /* semaforo_a.png in Resources */ = {isa = PBXBuildFile; fileRef = F2CBDA9516858FC300D9CA0B /* semaforo_a.png */; };
+		F2CBDA9916858FC300D9CA0B /* semaforo_r.png in Resources */ = {isa = PBXBuildFile; fileRef = F2CBDA9616858FC300D9CA0B /* semaforo_r.png */; };
+		F2CBDA9A16858FC300D9CA0B /* semaforo_v.png in Resources */ = {isa = PBXBuildFile; fileRef = F2CBDA9716858FC300D9CA0B /* semaforo_v.png */; };
+		F2CBDA9D1685900A00D9CA0B /* pie-graph.png in Resources */ = {isa = PBXBuildFile; fileRef = F2CBDA9C1685900A00D9CA0B /* pie-graph.png */; };
+		F2CBDB6D1685949F00D9CA0B /* FinanPortDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = F2CBDB6C1685949F00D9CA0B /* FinanPortDAO.m */; };
 		F2E6ACD91671AC7D00573AA0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E6ACD81671AC7D00573AA0 /* UIKit.framework */; };
 		F2E6ACDB1671AC7D00573AA0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E6ACDA1671AC7D00573AA0 /* Foundation.framework */; };
 		F2E6ACDD1671AC7D00573AA0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E6ACDC1671AC7D00573AA0 /* CoreGraphics.framework */; };
@@ -193,10 +194,12 @@
 		F2C542041676F7F900FA8BCC /* MonthChooserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonthChooserViewController.xib; sourceTree = "<group>"; };
 		F2CBBE4816755F490040F2F1 /* Bussines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bussines.h; sourceTree = "<group>"; };
 		F2CBBE4916755F490040F2F1 /* Bussines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bussines.m; sourceTree = "<group>"; };
-		F2CD5B691676EAEF00B627D4 /* pie-graph.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pie-graph.png"; sourceTree = "<group>"; };
-		F2DB39F71672FE8500794613 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
-		F2DB39F81672FE8500794613 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
-		F2DB39F91672FE8500794613 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		F2CBDA9516858FC300D9CA0B /* semaforo_a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = semaforo_a.png; sourceTree = "<group>"; };
+		F2CBDA9616858FC300D9CA0B /* semaforo_r.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = semaforo_r.png; sourceTree = "<group>"; };
+		F2CBDA9716858FC300D9CA0B /* semaforo_v.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = semaforo_v.png; sourceTree = "<group>"; };
+		F2CBDA9C1685900A00D9CA0B /* pie-graph.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pie-graph.png"; sourceTree = "<group>"; };
+		F2CBDA9E1685940E00D9CA0B /* FinanPortDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinanPortDAO.h; sourceTree = "<group>"; };
+		F2CBDB6C1685949F00D9CA0B /* FinanPortDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinanPortDAO.m; sourceTree = "<group>"; };
 		F2E6ACD41671AC7D00573AA0 /* FinanPort.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanPort.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E6ACD81671AC7D00573AA0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F2E6ACDA1671AC7D00573AA0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -285,6 +288,10 @@
 				3BBC3A4C168024D300F41182 /* CSVProcessBL.m */,
 				3BD6C1C416824C1400894731 /* ExportManagerBL.h */,
 				3BD6C1C516824C1400894731 /* ExportManagerBL.m */,
+				F28D9A111671C394005467FD /* Razon.h */,
+				F28D9A121671C394005467FD /* Razon.m */,
+				F2CBBE4816755F490040F2F1 /* Bussines.h */,
+				F2CBBE4916755F490040F2F1 /* Bussines.m */,
 			);
 			name = com.finanport.business;
 			sourceTree = "<group>";
@@ -306,6 +313,8 @@
 				3BBC3A59168024F200F41182 /* CatalogoGeograficoDAO.m */,
 				3B4785D01684052B00B88571 /* CatalogoValoresRazonesDAO.h */,
 				3B4785D11684052B00B88571 /* CatalogoValoresRazonesDAO.m */,
+				F2CBDA9E1685940E00D9CA0B /* FinanPortDAO.h */,
+				F2CBDB6C1685949F00D9CA0B /* FinanPortDAO.m */,
 			);
 			name = com.finanport.dao;
 			sourceTree = "<group>";
@@ -439,10 +448,10 @@
 		F2DB39F61672FE8500794613 /* imagenes */ = {
 			isa = PBXGroup;
 			children = (
-				F2DB39F71672FE8500794613 /* 1.jpg */,
-				F2CD5B691676EAEF00B627D4 /* pie-graph.png */,
-				F2DB39F81672FE8500794613 /* 2.jpg */,
-				F2DB39F91672FE8500794613 /* 3.jpg */,
+				F2CBDA9516858FC300D9CA0B /* semaforo_a.png */,
+				F2CBDA9C1685900A00D9CA0B /* pie-graph.png */,
+				F2CBDA9616858FC300D9CA0B /* semaforo_r.png */,
+				F2CBDA9716858FC300D9CA0B /* semaforo_v.png */,
 			);
 			path = imagenes;
 			sourceTree = "<group>";
@@ -486,11 +495,7 @@
 				3BBC3A4A16801F4500F41182 /* com.finanport.business */,
 				3BBC3A3516801DD700F41182 /* com.finanport.controller */,
 				3BBC3A3316801D7800F41182 /* com.finanport.main */,
-				F28D9A111671C394005467FD /* Razon.h */,
-				F2CBBE4816755F490040F2F1 /* Bussines.h */,
 				F28D9A171671CEA5005467FD /* RazonCell.h */,
-				F28D9A121671C394005467FD /* Razon.m */,
-				F2CBBE4916755F490040F2F1 /* Bussines.m */,
 				F28D9A181671CEA5005467FD /* RazonCell.m */,
 				F2E6ACF01671AC7D00573AA0 /* MainStoryboard.storyboard */,
 				F2C542041676F7F900FA8BCC /* MonthChooserViewController.xib */,
@@ -573,11 +578,11 @@
 				F2E6ACED1671AC7D00573AA0 /* Default@2x.png in Resources */,
 				F2E6ACEF1671AC7D00573AA0 /* Default-568h@2x.png in Resources */,
 				F2E6ACF21671AC7D00573AA0 /* MainStoryboard.storyboard in Resources */,
-				F2DB39FA1672FE8500794613 /* 1.jpg in Resources */,
-				F2DB39FB1672FE8500794613 /* 2.jpg in Resources */,
-				F2DB39FC1672FE8500794613 /* 3.jpg in Resources */,
-				F2CD5B6A1676EAEF00B627D4 /* pie-graph.png in Resources */,
 				F2C542061676F7F900FA8BCC /* MonthChooserViewController.xib in Resources */,
+				F2CBDA9816858FC300D9CA0B /* semaforo_a.png in Resources */,
+				F2CBDA9916858FC300D9CA0B /* semaforo_r.png in Resources */,
+				F2CBDA9A16858FC300D9CA0B /* semaforo_v.png in Resources */,
+				F2CBDA9D1685900A00D9CA0B /* pie-graph.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,6 +623,7 @@
 				3BD6C1BF16810B9800894731 /* FinanPort.xcdatamodeld in Sources */,
 				3BD6C1C616824C1400894731 /* ExportManagerBL.m in Sources */,
 				3B4785D21684052B00B88571 /* CatalogoValoresRazonesDAO.m in Sources */,
+				F2CBDB6D1685949F00D9CA0B /* FinanPortDAO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,6 +710,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/FinanPort\"",
+					"\"$(SRCROOT)/FinanPort/FinanPort/FinanPort\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -720,6 +727,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/FinanPort\"",
+					"\"$(SRCROOT)/FinanPort/FinanPort/FinanPort\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

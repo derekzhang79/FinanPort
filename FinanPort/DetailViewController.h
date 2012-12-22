@@ -15,20 +15,22 @@
 
 @interface DetailViewController : UIViewController <UIScrollViewDelegate,
                                                     CPTPlotDataSource>
+@property (nonatomic)                  int                   numberOfPages;
 
-@property (retain, nonatomic) IBOutlet UIScrollView  * scrollView;
-@property (weak,   nonatomic) IBOutlet UITextView    * detalleDelSignificado;
-@property (weak,   nonatomic) IBOutlet UITextView    * detalleDeLaLectura;
-@property (weak,   nonatomic) IBOutlet UIImageView   * semaforo;
-@property (weak,   nonatomic) IBOutlet UILabel       * detalleDelCuadrodeAccion;
-@property (weak,   nonatomic) IBOutlet UILabel       * detalleDeLosValoresDeLaGrafica;
-@property (weak,   nonatomic) IBOutlet UITextView    * detalleDelValorDeLaRazon;
-@property (retain, nonatomic)          DDPageControl * pageControl;
-@property (strong, nonatomic)          Razon         * razonActual;
-@property (nonatomic)                  int             numberOfPages;
+@property (retain, nonatomic) IBOutlet UIScrollView        * scrollView;
+@property (weak,   nonatomic) IBOutlet UITextView          * detalleDelSignificado;
+@property (weak,   nonatomic) IBOutlet UITextView          * detalleDeLaLectura;
+@property (weak,   nonatomic) IBOutlet UIImageView         * semaforo;
+@property (weak,   nonatomic) IBOutlet UILabel             * detalleDelCuadrodeAccion;
+@property (weak,   nonatomic) IBOutlet UILabel             * detalleDeLosValoresDeLaGrafica;
+@property (weak,   nonatomic) IBOutlet UITextView          * detalleDelValorDeLaRazon;
+@property (nonatomic, strong) IBOutlet UIImageView         * grafica;
+
+@property (retain, nonatomic)          DDPageControl       * pageControl;
+@property (strong, nonatomic)          Razon               * razonActual;
 @property (nonatomic, strong)          CPTGraphHostingView * hostView;
 @property (nonatomic, strong)          CPTTheme            * selectedTheme;
-@property (nonatomic, strong) IBOutlet UIImageView         * grafica;
+
 
 -(void)initPlot;
 -(void)configureHost;

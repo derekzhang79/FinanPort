@@ -31,7 +31,8 @@
 @property (retain, nonatomic)           NSURL                      * urlCSV;
 @property (retain, nonatomic)           CSVProcessBL               * processCSV;
 @property (retain, nonatomic)           ExportManagerBL            * exportManager;
-@property (retain, nonatomic)           MonthChooserViewController * popoverContent;
+@property (retain, nonatomic)           MonthChooserViewController * monthChooseViewController;
+@property (strong, nonatomic)           Bussines                   * bussines;
 
 - (void)     handleOpenURL:(NSURL *)url;
 - (IBAction) displayPopOver:(id)sender;
