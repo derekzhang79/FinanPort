@@ -247,8 +247,7 @@
     catalogoValoresRazonesDAO = [[CatalogoValoresRazonesDAO alloc] initContext];
     
     int index = 0;
-    
-    NSLog(@"JAJA %d", [catalogoValoresRazonesMinimo count]);
+
     if([[catalogoValoresRazonesDAO getAllValoresRazones] count] == 0) {
         for(int i=0; i<[catalogoValoresRazonesMinimo count]; i++) {
             NSString *minimo  = [catalogoValoresRazonesMinimo objectAtIndex:i];

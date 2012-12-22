@@ -6,6 +6,8 @@
 //  Copyright (c) 2012 komorka technology, llc. All rights reserved.
 //
 
+#import "CPDConstants.h"
+
 @interface CPDStockPriceStore : NSObject
 
 + (CPDStockPriceStore *)sharedInstance;
