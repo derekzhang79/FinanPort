@@ -293,8 +293,6 @@
 				3BD6C1C516824C1400894731 /* ExportManagerBL.m */,
 				3B8DD8A41686109600E11550 /* GraphManagerBL.h */,
 				3B8DD8A51686109600E11550 /* GraphManagerBL.m */,
-				F28D9A111671C394005467FD /* Razon.h */,
-				F28D9A121671C394005467FD /* Razon.m */,
 				F2CBBE4816755F490040F2F1 /* Bussines.h */,
 				F2CBBE4916755F490040F2F1 /* Bussines.m */,
 			);
@@ -450,6 +448,24 @@
 			name = CorePlot;
 			sourceTree = "<group>";
 		};
+		F2CB664C1686D935003E8BB2 /* com.finanport.bean */ = {
+			isa = PBXGroup;
+			children = (
+				F28D9A111671C394005467FD /* Razon.h */,
+				F28D9A121671C394005467FD /* Razon.m */,
+			);
+			name = com.finanport.bean;
+			sourceTree = "<group>";
+		};
+		F2CB664E1686D955003E8BB2 /* com.finanport.cell */ = {
+			isa = PBXGroup;
+			children = (
+				F28D9A171671CEA5005467FD /* RazonCell.h */,
+				F28D9A181671CEA5005467FD /* RazonCell.m */,
+			);
+			name = com.finanport.cell;
+			sourceTree = "<group>";
+		};
 		F2DB39F61672FE8500794613 /* imagenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -498,10 +514,10 @@
 				3BBC3A5A168024FC00F41182 /* com.finanport.entity */,
 				3BBC3A4D168024E200F41182 /* com.finanport.dao */,
 				3BBC3A4A16801F4500F41182 /* com.finanport.business */,
+				F2CB664C1686D935003E8BB2 /* com.finanport.bean */,
 				3BBC3A3516801DD700F41182 /* com.finanport.controller */,
 				3BBC3A3316801D7800F41182 /* com.finanport.main */,
-				F28D9A171671CEA5005467FD /* RazonCell.h */,
-				F28D9A181671CEA5005467FD /* RazonCell.m */,
+				F2CB664E1686D955003E8BB2 /* com.finanport.cell */,
 				F2E6ACF01671AC7D00573AA0 /* MainStoryboard.storyboard */,
 				F2C542041676F7F900FA8BCC /* MonthChooserViewController.xib */,
 				F2C542021676F7F900FA8BCC /* MonthChooserViewController.h */,
